@@ -54,6 +54,7 @@ export const addTeacher = async (payload = {}) => {
     email: payload.email,
     password: payload.password,
     name: `${payload.firstName} ${payload.lastName}`,
+    school: payload.school,
   });
 
   return res;
