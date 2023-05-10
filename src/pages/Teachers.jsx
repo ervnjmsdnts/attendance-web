@@ -51,8 +51,6 @@ const AddTeacherModal = ({ onClose, open }) => {
     },
   });
 
-  console.log({ user });
-
   const onSubmit = async (data) => {
     await addTeacherMutation.execute({ ...data, school: user.schoolName });
   };
