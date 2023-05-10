@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import { useState } from 'react';
 import Login from '../containers/Auth/Login';
 import SignUp from '../containers/Auth/SignUp';
