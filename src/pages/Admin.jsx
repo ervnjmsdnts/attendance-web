@@ -107,7 +107,7 @@ const Admin = () => {
 
   const filteredRows = rows.filter((r) => r.isMorning === filter);
 
-  const allCurrStudents = rows.length;
+  const allCurrStudents = students.length;
   const studentsInSchool = rows.filter((r) => r.status === 'IN').length;
   const studentsNotInSchool = rows.filter((r) => r.status === 'OUT').length;
 
