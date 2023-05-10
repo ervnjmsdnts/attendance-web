@@ -1,11 +1,4 @@
-import {
-  Box,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  Typography,
-} from '@mui/material';
+import { Box, MenuItem, Select, Typography } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
 import { collection, onSnapshot, query, where } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
@@ -108,8 +101,10 @@ const Admin = () => {
   const filteredRows = rows.filter((r) => r.isMorning === filter);
 
   const allCurrStudents = students.length;
+
   const studentsInSchool = rows.filter((r) => r.status === 'IN').length;
-  const studentsNotInSchool = rows.filter((r) => r.status === 'OUT').length;
+
+  const studentsNotInSchool = students.length - studentsInSchool;
 
   const columns = [
     {
